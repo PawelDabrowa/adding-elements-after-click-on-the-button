@@ -16,11 +16,7 @@ function addOddElement() {
     }
 }
 
-
-
 addOdd.addEventListener('click', addOddElement);
-
-
 
 //Adding even element
 let numberEven = 2;
