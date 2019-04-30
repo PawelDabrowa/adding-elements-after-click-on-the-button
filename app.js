@@ -1,8 +1,7 @@
 
 const addOdd = document.querySelector('.add-odd-element');
 const addEven = document.querySelector('.add-even-element');
-const removeOdd = document.querySelector('.remove-odd-element');
-const removeEven = document.querySelector('.remove-even-element');
+
 //Adding odd element
 let numberOdd = 1;
 
@@ -17,13 +16,6 @@ function addOddElement() {
     }
 }
 
-removeOddElement = () => {
-    const parentElement = document.querySelector('li');
-    const childElement = document.querySelector('li:nth-last-child(1)');
-    // removeA.remove()
-    return parentElement.parentNode.removeChild(childElement);
-}
-removeOdd.addEventListener('click', removeOddElement);
 
 
 addOdd.addEventListener('click', addOddElement);
@@ -47,4 +39,28 @@ function addEvenElement() {
 }
 
 addEven.addEventListener('click', addEvenElement);
+
+//Removing Last element
+const removeLast = document.querySelector('.remove-odd-element');
+
+removeLastElement = () => {
+    const parentElement = document.querySelector('li');
+    const childElement = document.querySelector('li:nth-last-child(1)');
+    // removeA.remove() 
+    return parentElement.parentNode.removeChild(childElement);
+
+}
+removeLast.addEventListener('click', removeLastElement);
+
+//Removing first element
+const removeFirst = document.querySelector('.remove-even-element');
+
+removeFirstElement = () => {
+    const parentElement = document.querySelector('li');
+    const childElement = document.querySelector('li:nth-of-type(1)');
+    // removeA.remove() 
+    return parentElement.parentNode.removeChild(childElement);
+
+}
+removeFirst.addEventListener('click', removeFirstElement);
 
