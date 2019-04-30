@@ -1,5 +1,5 @@
 
-const newElement = document.querySelector('button')
+const newElement = document.querySelector('.add-odd-element')
 
 let numberEven = 1;
 
